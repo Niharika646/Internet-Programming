@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Library Management System</h1>
+    <p>Welcome to Our College Library</p>
+
+    <section>
+        <h2>Student Account</h2>
+        <button onclick="login()">Login</button>
+        <button onclick="register()">Register</button>
+    </section>
+
+    <section>
+        <h2>Search Books</h2>
+        <input type="text" id="search" placeholder="Enter book name">
+        <button onclick="searchBook()">Search</button>
+        <p id="result"></p>
+    </section>
+
+    <section>
+        <h2>Admin - Add Book</h2>
+        <input type="text" id="bookName" placeholder="Enter book name">
+        <button onclick="addBook()">Add Book</button>
+        <ul id="bookList"></ul>
+    </section>
+
+    <section>
+        <h2>Fine Calculator</h2>
+        <input type="number" id="days" placeholder="Late days">
+        <button onclick="calculateFine()">Calculate Fine</button>
+        <p id="fineResult"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
