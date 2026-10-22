@@ -1,0 +1,144 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef3f9;
+    color: #222;
+}
+
+header {
+    background: #07519b;
+    color: white;
+    padding: 22px 12px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px;
+    background: #07366a;
+}
+
+button {
+    background: #0866c6;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #064b91;
+}
+
+main {
+    max-width: 900px;
+    min-height: 420px;
+    margin: 24px auto;
+    padding: 0 14px;
+}
+
+.page {
+    background: white;
+    padding: 22px;
+    border-radius: 9px;
+    box-shadow: 0 2px 8px #cbd5e1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    margin: 8px 0 15px;
+    border: 1px solid #b9c7d8;
+    border-radius: 5px;
+    background: white;
+}
+
+label {
+    font-weight: bold;
+}
+
+.train-card, .item-card, .ticket-card {
+    background: #f8fbff;
+    border: 1px solid #c9d9ed;
+    border-radius: 7px;
+    padding: 15px;
+    margin: 14px 0;
+}
+
+.train-card h3, .ticket-card h3 {
+    color: #07519b;
+}
+
+.success {
+    color: #16703a;
+    font-weight: bold;
+}
+
+.warning {
+    color: #a15b00;
+    font-weight: bold;
+}
+
+footer {
+    background: #07366a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    .page {
+        padding: 15px;
+    }
+
+    nav button {
+        padding: 9px;
+        font-size: 13px;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #ticketPage, #ticketPage * {
+        visibility: visible;
+    }
+
+    #ticketPage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    #ticketPage button {
+        display: none;
+    }
+}

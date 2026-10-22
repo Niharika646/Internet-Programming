@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Railway Reservation System</h1>
+    <p>Search Trains | Book Tickets | Check PNR</p>
+</header>
+
+<nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('register')">Register</button>
+    <button onclick="showPage('userLogin')">User Login</button>
+    <button onclick="showPage('adminLogin')">Admin Login</button>
+    <button onclick="showPage('dashboard')">My Bookings</button>
+    <button onclick="showPage('pnrPage')">PNR Status</button>
+    <button onclick="showPage('cancelPage')">Cancel Ticket</button>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<main>
+    <section id="home" class="page">
+        <h2>Search Trains</h2>
+        <form id="searchForm">
+            <label>From Station</label>
+            <input id="from" placeholder="e.g. Chennai" required>
+            <label>To Station</label>
+            <input id="to" placeholder="e.g. Bangalore" required>
+            <label>Journey Date</label>
+            <input id="journeyDate" type="date" required>
+            <label>Travel Class</label>
+            <select id="searchClass">
+                <option value="All">All Classes</option>
+                <option value="Sleeper">Sleeper</option>
+                <option value="AC 3 Tier">AC 3 Tier</option>
+                <option value="AC 2 Tier">AC 2 Tier</option>
+                <option value="First AC">First AC</option>
+            </select>
+            <button type="submit">Search Trains</button>
+        </form>
+        <div id="trainResults"></div>
+    </section>
+
+    <section id="register" class="page hidden">
+        <h2>User Registration</h2>
+        <form id="registerForm">
+            <input id="regName" placeholder="Full Name" required>
+            <input id="regEmail" type="email" placeholder="Email" required>
+            <input id="regMobile" type="tel" pattern="[0-9]{10}"
+                   placeholder="10-digit mobile number" required>
+            <input id="regPassword" type="password" minlength="4"
+                   placeholder="Password (minimum 4 characters)" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section id="userLogin" class="page hidden">
+        <h2>User Login</h2>
+        <form id="userLoginForm">
+            <input id="userEmail" type="email" placeholder="Registered Email" required>
+            <input id="userPassword" type="password" placeholder="Password" required>
+            <button type="submit">Login as User</button>
+        </form>
+        <p>New user? <button onclick="showPage('register')">Register Here</button></p>
+    </section>
+
+    <section id="adminLogin" class="page hidden">
+        <h2>Admin Login</h2>
+        <form id="adminLoginForm">
+            <input id="adminUsername" placeholder="Username" required>
+            <input id="adminPassword" type="password" placeholder="Password" required>
+            <button type="submit">Login as Admin</button>
+        </form>
+        <p>Demo username: admin</p>
+        <p>Demo password: admin123</p>
+    </section>
+
+    <section id="bookingPage" class="page hidden">
+        <h2>Book Train Ticket</h2>
+        <div id="selectedTrain"></div>
+        <form id="bookingForm">
+            <label>Journey Date</label>
+            <input id="bookDate" type="date" required>
+            <label>Travel Class</label>
+            <select id="travelClass" required>
+                <option value="Sleeper">Sleeper</option>
+                <option value="AC 3 Tier">AC 3 Tier</option>
+                <option value="AC 2 Tier">AC 2 Tier</option>
+                <option value="First AC">First AC</option>
+            </select>
+            <label>Passenger Name</label>
+            <input id="passengerName" required>
+            <label>Passenger Age</label>
+            <input id="passengerAge" type="number" min="1" max="120" required>
+            <label>Gender</label>
+            <select id="passengerGender" required>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Other">Other</option>
+            </select>
+            <label>Number of Tickets</label>
+            <input id="ticketCount" type="number" min="1" max="6" value="1" required>
+            <label>Payment Mode</label>
+            <select id="paymentMode" required>
+                <option value="UPI">UPI (Demo)</option>
+                <option value="Card">Debit/Credit Card (Demo)</option>
+                <option value="Offline">Offline Payment (Demo)</option>
+            </select>
+            <button type="submit">Pay & Book Ticket</button>
+        </form>
+    </section>
+
+    <section id="ticketPage" class="page hidden">
+        <h2>Booking Confirmation</h2>
+        <div id="ticketDetails"></div>
+        <button onclick="window.print()">Print Ticket</button>
+        <button onclick="showPage('dashboard')">My Bookings</button>
+    </section>
+
+    <section id="dashboard" class="page hidden">
+        <h2>My Booking History</h2>
+        <div id="bookingList"></div>
+    </section>
+
+    <section id="pnrPage" class="page hidden">
+        <h2>Check PNR Status</h2>
+        <form id="pnrForm">
+            <input id="pnrInput" placeholder="Enter PNR Number" required>
+            <button type="submit">Check Status</button>
+        </form>
+        <div id="pnrResult"></div>
+    </section>
+
+    <section id="cancelPage" class="page hidden">
+        <h2>Cancel Ticket</h2>
+        <form id="cancelForm">
+            <input id="cancelPnr" placeholder="Enter PNR Number" required>
+            <button type="submit">Find Ticket</button>
+        </form>
+        <div id="cancelResult"></div>
+    </section>
+
+    <section id="admin" class="page hidden">
+        <h2>Admin Panel</h2>
+        <p id="adminStatus"></p>
+        <div id="adminControls" class="hidden">
+            <h3>Add / Update Train</h3>
+            <form id="trainForm">
+                <input id="trainId" type="hidden">
+                <input id="trainName" placeholder="Train Name" required>
+                <input id="trainNumber" placeholder="Train Number" required>
+                <input id="trainFrom" placeholder="Origin Station" required>
+                <input id="trainTo" placeholder="Destination Station" required>
+                <label>Departure Time</label>
+                <input id="trainTime" type="time" required>
+                <label>Arrival Time</label>
+                <input id="arrivalTime" type="time" required>
+                <input id="trainSeats" type="number" min="1" max="500"
+                       placeholder="Available seats" required>
+                <input id="trainFare" type="number" min="1"
+                       placeholder="Base fare" required>
+                <button type="submit">Save Train</button>
+            </form>
+
+            <h3>Manage Trains</h3>
+            <div id="adminTrainList"></div>
+
+            <h3>Registered Users</h3>
+            <div id="adminUserList"></div>
+
+            <h3>Booking & Payment Reports</h3>
+            <button onclick="generateReport()">Generate Report</button>
+            <button onclick="downloadReport()">Download CSV Report</button>
+            <div id="report"></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Railway Reservation System | Internet Programming Lab</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
