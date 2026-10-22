@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bus Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Online Bus Ticket Booking</h1>
+    <p>Search, book and manage your bus tickets easily</p>
+</header>
+
+<nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('register')">Register</button>
+    <button onclick="showPage('userLogin')">User Login</button>
+    <button onclick="showPage('adminLogin')">Admin Login</button>
+    <button onclick="showPage('bookings')">My Bookings</button>
+    <button onclick="showPage('comments')">Comments</button>
+    <button onclick="showPage('admin')">Admin</button>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<main>
+    <section id="home" class="page">
+        <h2>Search Buses</h2>
+        <form id="searchForm">
+            <label>From</label>
+            <input id="from" placeholder="Enter starting city" required>
+
+            <label>To</label>
+            <input id="to" placeholder="Enter destination" required>
+
+            <label>Journey Date</label>
+            <input type="date" id="date" required>
+
+            <button type="submit">Search Buses</button>
+        </form>
+        <div id="busResults"></div>
+    </section>
+
+    <section id="register" class="page hidden">
+        <h2>User Registration</h2>
+        <form id="registerForm">
+            <input id="regName" placeholder="Full name" required>
+            <input id="regEmail" type="email" placeholder="Email" required>
+            <input id="regPassword" type="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+   
+<!-- USER LOGIN -->
+<section id="userLogin" class="page hidden">
+    <h2>User Login</h2>
+
+    <form id="userLoginForm">
+        <input id="userEmail" type="email"
+               placeholder="Registered Email" required>
+
+        <input id="userPassword" type="password"
+               placeholder="Password" required>
+
+        <button type="submit">Login as User</button>
+    </form>
+
+    <p>Don't have an account?</p>
+    <button onclick="showPage('register')">Register Here</button>
+</section>
+
+<!-- ADMIN LOGIN -->
+<section id="adminLogin" class="page hidden">
+    <h2>Admin Login</h2>
+
+    <form id="adminLoginForm">
+        <input id="adminUsername"
+               placeholder="Admin Username" required>
+
+        <input id="adminPassword" type="password"
+               placeholder="Admin Password" required>
+
+        <button type="submit">Login as Admin</button>
+    </form>
+
+    <p>Username: admin</p>
+    <p>Password: admin123</p>
+</section>
+
+
+    <section id="bookings" class="page hidden">
+        <h2>My Booking History</h2>
+        <div id="bookingList"></div>
+    </section>
+
+    <section id="comments" class="page hidden">
+        <h2>Bus Comments</h2>
+        <form id="commentForm">
+            <input id="commentBus" placeholder="Bus name" required>
+            <textarea id="commentText" placeholder="Write your comment" required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+        <div id="commentList"></div>
+    </section>
+
+    <section id="admin" class="page hidden">
+        <h2>Admin Panel</h2>
+        <p id="adminStatus">Login as admin to manage the system.</p>
+
+        <div id="adminControls" class="hidden">
+            <h3>Add / Update Bus Information</h3>
+            <form id="busForm">
+                <input id="busId" type="hidden">
+                <input id="busName" placeholder="Bus name" required>
+                <input id="busFrom" placeholder="Starting city" required>
+                <input id="busTo" placeholder="Destination" required>
+                <input id="busTime" type="time" required>
+                <select id="busCategory" required>
+                    <option value="">Select bus category</option>
+                    <option>Volvo</option>
+                    <option>Sleeper Coach</option>
+                    <option>AC Coach</option>
+                    <option>Non-AC Coach</option>
+                </select>
+                <input id="busSeats" type="number" min="1" max="60"
+                       placeholder="Total seats" required>
+                <input id="busPrice" type="number" min="1"
+                       placeholder="Ticket price" required>
+                <button type="submit">Save Bus</button>
+            </form>
+
+            <h3>Manage Buses</h3>
+            <div id="adminBusList"></div>
+
+            <h3>Registered Users</h3>
+            <div id="userList"></div>
+
+            <h3>Reports</h3>
+            <button onclick="generateReport()">Generate Report</button>
+            <button onclick="downloadReport()">Download Report</button>
+            <div id="report"></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Online Bus Ticket Booking System | Internet Programming Lab</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

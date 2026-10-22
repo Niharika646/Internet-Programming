@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f1f5f9;
+    color: #222;
+}
+
+header {
+    background: #123b65;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+nav {
+    background: #082b4c;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+}
+
+button {
+    background: #087e8b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+
+button:hover {
+    background: #065f68;
+}
+
+main {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 0 15px;
+    min-height: 400px;
+}
+
+.page {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.hidden {
+    display: none !important;
+}
+
+input, select, textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px;
+    margin: 10px 0 15px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.bus-card, .item-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.bus-card h3, .item-card h3 {
+    color: #123b65;
+}
+
+.seats {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(35px, 1fr));
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.seat {
+    background: #d7f5df;
+    color: #14532d;
+}
+
+.seat.selected {
+    background: #087e8b;
+    color: white;
+}
+
+.seat:disabled {
+    background: #ddd;
+    color: #666;
+    cursor: not-allowed;
+}
+
+footer {
+    background: #123b65;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav button {
+        padding: 9px;
+    }
+
+    .page {
+        padding: 15px;
+    }
+}
