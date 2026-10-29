@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Flight Reservation System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>✈ SkyFly Airlines</h1>
+    <p>Online Flight Reservation System</p>
+</header>
+
+<nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('register')">Register</button>
+    <button onclick="showPage('login')">Login</button>
+    <button onclick="showPage('bookings')">My Bookings</button>
+    <button onclick="showPage('pnr')">PNR Status</button>
+    <button onclick="showPage('admin')">Admin</button>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<main>
+<section id="home" class="page">
+    <h2>Search Flights</h2>
+    <form id="searchForm">
+        <label>From</label>
+        <select id="from" required>
+            <option value="">Select Source</option>
+            <option>Chennai</option>
+            <option>Bengaluru</option>
+            <option>Hyderabad</option>
+            <option>Mumbai</option>
+            <option>Delhi</option>
+        </select>
+
+        <label>To</label>
+        <select id="to" required>
+            <option value="">Select Destination</option>
+            <option>Chennai</option>
+            <option>Bengaluru</option>
+            <option>Hyderabad</option>
+            <option>Mumbai</option>
+            <option>Delhi</option>
+        </select>
+
+        <label>Travel Date</label>
+        <input type="date" id="travelDate" required>
+
+        <label>Travel Class</label>
+        <select id="travelClass">
+            <option>Economy</option>
+            <option>Business</option>
+            <option>First Class</option>
+        </select>
+
+        <button type="submit">Search Flights</button>
+    </form>
+    <div id="flightResults"></div>
+</section>
+
+<section id="register" class="page hidden">
+    <h2>Passenger Registration</h2>
+    <form id="registerForm">
+        <input id="regName" placeholder="Full Name" required>
+        <input id="regEmail" type="email" placeholder="Email" required>
+        <input id="regPassword" type="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+    </form>
+    <p id="registerMessage"></p>
+</section>
+
+<section id="login" class="page hidden">
+    <h2>Passenger Login</h2>
+    <form id="loginForm">
+        <input id="loginEmail" type="email" placeholder="Email" required>
+        <input id="loginPassword" type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    <p id="loginMessage"></p>
+</section>
+
+<section id="booking" class="page hidden">
+    <h2>Book Your Flight</h2>
+    <p id="selectedFlight"></p>
+
+    <form id="bookingForm">
+        <label>Passenger Name</label>
+        <input id="passengerName" required>
+
+        <label>Passenger Age</label>
+        <input id="passengerAge" type="number" min="1" max="120" required>
+
+        <label>Seat Number</label>
+        <select id="seatNumber" required></select>
+
+        <label>Payment Method</label>
+        <select id="paymentMethod">
+            <option>Demo Online Payment</option>
+            <option>Pay at Counter (Demo)</option>
+        </select>
+
+        <button type="submit">Confirm Booking</button>
+    </form>
+</section>
+
+<section id="ticket" class="page hidden">
+    <h2>Your E-Ticket</h2>
+    <div id="ticketDetails"></div>
+    <button onclick="window.print()">Print Ticket</button>
+</section>
+
+<section id="bookings" class="page hidden">
+    <h2>My Booking History</h2>
+    <div id="bookingHistory"></div>
+</section>
+
+<section id="pnr" class="page hidden">
+    <h2>Check Booking Status</h2>
+    <form id="pnrForm">
+        <input id="pnrInput" placeholder="Enter PNR Number" required>
+        <button type="submit">Check Status</button>
+    </form>
+    <div id="pnrResult"></div>
+</section>
+
+<section id="admin" class="page hidden">
+    <h2>Admin Panel</h2>
+    <p>Demo login: <b>admin</b> / <b>admin123</b></p>
+
+    <form id="adminLoginForm">
+        <input id="adminUser" placeholder="Admin Username" required>
+        <input id="adminPass" type="password" placeholder="Admin Password" required>
+        <button type="submit">Admin Login</button>
+    </form>
+
+    <div id="adminPanel" class="hidden">
+        <h3>Add a Flight</h3>
+        <form id="flightForm">
+            <input id="flightName" placeholder="Airline Name" required>
+            <input id="flightFrom" placeholder="Source City" required>
+            <input id="flightTo" placeholder="Destination City" required>
+            <input id="flightTime" type="time" required>
+            <input id="flightFare" type="number" min="1" placeholder="Base Fare" required>
+            <input id="flightSeats" type="number" min="1" placeholder="Available Seats" required>
+            <button type="submit">Add Flight</button>
+        </form>
+
+        <h3>Manage Flights</h3>
+        <div id="adminFlights"></div>
+
+        <h3>Registered Passengers</h3>
+        <div id="adminUsers"></div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>Online Flight Reservation System | Internet Programming Lab</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

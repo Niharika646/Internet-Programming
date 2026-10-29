@@ -1,0 +1,126 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef4fb;
+    color: #222;
+}
+
+header {
+    background: #0756a5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background: #063b70;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 8px;
+}
+
+button {
+    background: #0878d1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #034d91;
+}
+
+main {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 15px;
+}
+
+.page {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccd5df;
+}
+
+.hidden {
+    display: none;
+}
+
+h2, h3 {
+    color: #0756a5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, select {
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+}
+
+.flight-card, .ticket-card, .booking-card {
+    border: 1px solid #cbd8e8;
+    border-radius: 7px;
+    padding: 15px;
+    margin-top: 15px;
+    background: #f8fbff;
+}
+
+footer {
+    text-align: center;
+    background: #063b70;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .page {
+        padding: 15px;
+    }
+
+    nav button {
+        flex: 1 1 40%;
+    }
+}
+
+@media print {
+    header, nav, footer, button, form {
+        display: none !important;
+    }
+
+    body, main, .page {
+        background: white;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+}
