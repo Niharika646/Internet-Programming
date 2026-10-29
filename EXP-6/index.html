@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Cake Ordering System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎂 Sweet Treats</h1>
+    <p>Order Happiness, One Cake at a Time!</p>
+</header>
+
+<nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('register')">Register</button>
+    <button onclick="showPage('login')">Login</button>
+    <button onclick="showPage('orders')">My Orders</button>
+    <button onclick="showPage('admin')">Admin</button>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<main>
+<section id="home" class="page">
+    <h2>Our Cakes</h2>
+
+    <label>Category</label>
+    <select id="categoryFilter">
+        <option value="All">All Cakes</option>
+        <option value="Birthday">Birthday</option>
+        <option value="Wedding">Wedding</option>
+        <option value="Anniversary">Anniversary</option>
+        <option value="Special">Special Occasion</option>
+    </select>
+
+    <label>Flavor</label>
+    <select id="flavorFilter">
+        <option value="All">All Flavors</option>
+        <option>Chocolate</option>
+        <option>Vanilla</option>
+        <option>Strawberry</option>
+        <option>Black Forest</option>
+    </select>
+
+    <div id="cakeList" class="cake-grid"></div>
+</section>
+
+<section id="register" class="page hidden">
+    <h2>Create Account</h2>
+    <form id="registerForm">
+        <input id="regName" placeholder="Full Name" required>
+        <input id="regEmail" type="email" placeholder="Email Address" required>
+        <input id="regPassword" type="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+    </form>
+    <p id="registerMessage"></p>
+</section>
+
+<section id="login" class="page hidden">
+    <h2>User Login</h2>
+    <form id="loginForm">
+        <input id="loginEmail" type="email" placeholder="Email Address" required>
+        <input id="loginPassword" type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    <p id="loginMessage"></p>
+</section>
+
+<section id="order" class="page hidden">
+    <h2>Customize Your Cake</h2>
+    <p id="selectedCake"></p>
+
+    <form id="orderForm">
+        <label>Cake Size</label>
+        <select id="cakeSize">
+            <option value="0.5">Half Kg</option>
+            <option value="1">1 Kg</option>
+            <option value="2">2 Kg</option>
+        </select>
+
+        <label>Flavor</label>
+        <select id="orderFlavor">
+            <option>Chocolate</option>
+            <option>Vanilla</option>
+            <option>Strawberry</option>
+            <option>Black Forest</option>
+        </select>
+
+        <label>Message on Cake</label>
+        <input id="cakeMessage" maxlength="60" placeholder="Happy Birthday!">
+
+        <label>Delivery Address</label>
+        <textarea id="deliveryAddress" rows="3" required></textarea>
+
+        <label>Delivery Date</label>
+        <input id="deliveryDate" type="date" required>
+
+        <label>Payment Method</label>
+        <select id="paymentMethod">
+            <option>Demo Online Payment</option>
+            <option>Cash on Delivery</option>
+        </select>
+
+        <button type="submit">Place Order</button>
+    </form>
+</section>
+
+<section id="confirmation" class="page hidden">
+    <h2>Order Confirmation</h2>
+    <div id="confirmationDetails"></div>
+    <button onclick="showPage('orders')">View My Orders</button>
+</section>
+
+<section id="orders" class="page hidden">
+    <h2>My Orders</h2>
+    <div id="orderHistory"></div>
+</section>
+
+<section id="admin" class="page hidden">
+    <h2>Admin Panel</h2>
+    <p>Demo login: <b>admin</b> / <b>admin123</b></p>
+
+    <form id="adminLoginForm">
+        <input id="adminUsername" placeholder="Admin Username" required>
+        <input id="adminPassword" type="password" placeholder="Admin Password" required>
+        <button type="submit">Admin Login</button>
+    </form>
+
+    <div id="adminPanel" class="hidden">
+        <h3>Add a Cake</h3>
+        <form id="cakeForm">
+            <input id="cakeName" placeholder="Cake Name" required>
+            <input id="cakePrice" type="number" min="1" placeholder="Price per Kg" required>
+
+            <select id="cakeCategory">
+                <option>Birthday</option>
+                <option>Wedding</option>
+                <option>Anniversary</option>
+                <option>Special</option>
+            </select>
+
+            <select id="cakeFlavor">
+                <option>Chocolate</option>
+                <option>Vanilla</option>
+                <option>Strawberry</option>
+                <option>Black Forest</option>
+            </select>
+
+            <input id="cakeImage" placeholder="Image URL (optional)">
+            <input id="cakeStock" type="number" min="0" placeholder="Available Quantity" required>
+            <button type="submit">Add Cake</button>
+        </form>
+
+        <h3>Manage Cakes</h3>
+        <div id="adminCakeList"></div>
+
+        <h3>Manage Orders</h3>
+        <div id="adminOrderList"></div>
+
+        <h3>Registered Users</h3>
+        <div id="adminUserList"></div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>Sweet Treats | Online Cake Ordering System | Internet Programming Lab</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
