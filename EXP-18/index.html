@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Farm essentials for every growing season." name="description"/>
+  <title>
+   AgriMart Farm Supplies | Internet Programming Lab
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body class="theme-farm" data-experiment="18">
+  <div class="announcement">
+   INTERNET PROGRAMMING LAB
+   <span>
+    EXPERIMENT 18
+   </span>
+   <span class="demo-flag">
+    FRONT-END DEMO
+   </span>
+  </div>
+  <header class="site-header">
+   <a class="brand" href="#top">
+    <span class="brand-mark">
+     ✳
+    </span>
+    <span>
+     <strong>
+      AgriMart Farm Supplies
+     </strong>
+     <small>
+      Agri services
+     </small>
+    </span>
+   </a>
+   <nav class="main-nav">
+    <a href="#catalog">
+     Farm essentials
+    </a>
+    <a href="#workspace">
+     Order details
+    </a>
+    <a href="#about">
+     About this demo
+    </a>
+   </nav>
+   <button class="nav-action" onclick="document.getElementById('workspace').scrollIntoView({behavior:'smooth'})">
+    Get started
+    <span>
+     &nearrow;
+    </span>
+   </button>
+  </header>
+  <main class="page-shell" id="top">
+   <section class="hero hero-store">
+    <div class="hero-copy">
+     <p class="eyebrow">
+      AGRICULTURE / FARM STORE
+     </p>
+     <h1>
+      AgriMart Farm Supplies
+      <br/>
+      <em>
+       Farm essentials for every growing season.
+      </em>
+     </h1>
+     <p class="hero-sub">
+      Explore collections selected for your everyday needs.
+     </p>
+     <a class="primary-link" href="#catalog">
+      Explore collection
+      <b>
+       &nearrow;
+      </b>
+     </a>
+    </div>
+    <div class="hero-art">
+     <div class="art-orbit orbit-one">
+     </div>
+     <div class="art-orbit orbit-two">
+     </div>
+     <div class="art-object">
+      🌾
+     </div>
+     <div class="floating-note">
+      Curated for you
+      <strong>
+       ✦
+      </strong>
+     </div>
+    </div>
+   </section>
+   <div class="quick-strip">
+    <div class="quick-item">
+     <span class="quick-icon">
+      ✦
+     </span>
+     <span>
+      <strong>
+       Seeds
+      </strong>
+      <small>
+       Find supplies for your crop.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      ◉
+     </span>
+     <span>
+      <strong>
+       Fertilizers
+      </strong>
+      <small>
+       Compare product types and quantities.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      &nearrow;
+     </span>
+     <span>
+      <strong>
+       Tools &amp; irrigation
+      </strong>
+      <small>
+       Review shipping and order status.
+      </small>
+     </span>
+    </div>
+   </div>
+   <section class="section-block product-section" id="catalog">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       THE COLLECTION
+      </p>
+      <h2>
+       Popular right now
+      </h2>
+     </div>
+     <div class="product-controls">
+      <select id="categoryFilter">
+       <option value="All">
+        All categories
+       </option>
+       <option>
+        Fertilizers
+       </option>
+       <option>
+        Irrigation
+       </option>
+       <option>
+        Seeds
+       </option>
+       <option>
+        Soil care
+       </option>
+       <option>
+        Tools
+       </option>
+      </select>
+      <span class="cart-pill">
+       🛍 Cart
+       <b id="cartCount">
+        0
+       </b>
+      </span>
+     </div>
+    </div>
+    <div class="product-grid">
+     <article class="product-card" data-category="Seeds">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-1">
+       <span>
+        🌱
+       </span>
+       <small>
+        BESTSELLER
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Seeds
+       </small>
+       <h3>
+        Hybrid vegetable seeds
+       </h3>
+       <div class="rating">
+        &starf; 4.8
+        <span>
+         (31)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹180
+        </strong>
+        <span class="old-price">
+         ₹480
+        </span>
+       </div>
+       <button class="add-cart" data-price="180" data-product="Hybrid vegetable seeds" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+     <article class="product-card" data-category="Fertilizers">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-2">
+       <span>
+        🪴
+       </span>
+       <small>
+        NEW FIND
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Fertilizers
+       </small>
+       <h3>
+        Organic compost
+       </h3>
+       <div class="rating">
+        &starf; 4.7
+        <span>
+         (38)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹320
+        </strong>
+        <span class="old-price">
+         ₹620
+        </span>
+       </div>
+       <button class="add-cart" data-price="320" data-product="Organic compost" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+     <article class="product-card" data-category="Tools">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-3">
+       <span>
+        🚿
+       </span>
+       <small>
+        PICKED FOR YOU
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Tools
+       </small>
+       <h3>
+        Hand sprayer
+       </h3>
+       <div class="rating">
+        &starf; 4.6
+        <span>
+         (45)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹650
+        </strong>
+        <span class="old-price">
+         ₹950
+        </span>
+       </div>
+       <button class="add-cart" data-price="650" data-product="Hand sprayer" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+     <article class="product-card" data-category="Irrigation">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-4">
+       <span>
+        💧
+       </span>
+       <small>
+        NEW FIND
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Irrigation
+       </small>
+       <h3>
+        Drip irrigation kit
+       </h3>
+       <div class="rating">
+        &starf; 4.5
+        <span>
+         (52)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹1,499
+        </strong>
+        <span class="old-price">
+         ₹1,799
+        </span>
+       </div>
+       <button class="add-cart" data-price="1499" data-product="Drip irrigation kit" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+     <article class="product-card" data-category="Tools">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-5">
+       <span>
+        🧤
+       </span>
+       <small>
+        GREAT VALUE
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Tools
+       </small>
+       <h3>
+        Garden gloves
+       </h3>
+       <div class="rating">
+        &starf; 4.8
+        <span>
+         (59)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹199
+        </strong>
+        <span class="old-price">
+         ₹499
+        </span>
+       </div>
+       <button class="add-cart" data-price="199" data-product="Garden gloves" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+     <article class="product-card" data-category="Soil care">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-6">
+       <span>
+        🧪
+       </span>
+       <small>
+        NEW FIND
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Soil care
+       </small>
+       <h3>
+        Soil test kit
+       </h3>
+       <div class="rating">
+        &starf; 4.7
+        <span>
+         (66)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹499
+        </strong>
+        <span class="old-price">
+         ₹799
+        </span>
+       </div>
+       <button class="add-cart" data-price="499" data-product="Soil test kit" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+    </div>
+    <div aria-live="polite" class="cart-feedback" id="cartFeedback">
+     Your cart is empty. Add a product to see your cart total.
+    </div>
+   </section>
+   <section class="section-block workspace-section" id="workspace">
+    <div class="workspace-heading">
+     <div>
+      <p class="eyebrow">
+       PERSONALISE YOUR EXPERIENCE
+      </p>
+      <h2>
+       Search &amp; checkout
+      </h2>
+      <p>
+       Use the controls to filter the collection or generate a sample order.
+      </p>
+     </div>
+     <div class="workspace-badge">
+      DEMO CHECKOUT
+      <span>
+       ●
+      </span>
+     </div>
+    </div>
+    <form class="workspace-form store-form" id="mainForm">
+     <label class="field">
+      <span>
+       Search farm products
+      </span>
+      <input id="field0" name="field0" placeholder="Enter search farm products" required="" type="search"/>
+     </label>
+     <label class="field">
+      <span>
+       Category
+      </span>
+      <select id="field1" name="field1" required="">
+       <option value="">
+        Choose category
+       </option>
+       <option>
+        Seeds
+       </option>
+       <option>
+        Fertilizers
+       </option>
+       <option>
+        Crop protection
+       </option>
+       <option>
+        Tools
+       </option>
+       <option>
+        Irrigation
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Crop type
+      </span>
+      <select id="field2" name="field2">
+       <option value="">
+        Choose crop type
+       </option>
+       <option>
+        Rice
+       </option>
+       <option>
+        Wheat
+       </option>
+       <option>
+        Vegetables
+       </option>
+       <option>
+        Fruits
+       </option>
+       <option>
+        Cotton
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Farm size (acres)
+      </span>
+      <input id="field3" min="0" name="field3" placeholder="Enter farm size (acres)" type="number"/>
+     </label>
+     <label class="field">
+      <span>
+       Delivery pincode
+      </span>
+      <input id="field4" name="field4" placeholder="Enter delivery pincode" type="text"/>
+     </label>
+     <button class="submit-btn" type="submit">
+      Find farm supplies
+      <span>
+       &rarr;
+      </span>
+     </button>
+    </form>
+    <div aria-live="polite" class="result-panel" hidden="" id="result">
+    </div>
+   </section>
+   <section class="note-band">
+    <div class="note-icon">
+     ✳
+    </div>
+    <div>
+     <p class="eyebrow">
+      GOOD TO KNOW
+     </p>
+     <h2>
+      From source to doorstep
+     </h2>
+     <p>
+      Check product type, quantity and delivery information before submitting the demo order.
+     </p>
+    </div>
+    <a href="#workspace">
+     Continue to workspace &nearrow;
+    </a>
+   </section>
+   <section class="about-demo" id="about">
+    <div>
+     <p class="eyebrow">
+      ABOUT THIS EXPERIMENT
+     </p>
+     <h2>
+      A task-focused interface, built for the lab.
+     </h2>
+    </div>
+    <p>
+     This website demonstrates the fields, workflow and result associated with
+     <strong>
+      Experiment 18: AgriMart Farm Supplies
+     </strong>
+     . Generated records are stored only in this page session and are not sent to a server.
+    </p>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <span>
+    &copy; 2026 AgriMart Farm Supplies &mdash; Lab demonstration
+   </span>
+   <span>
+    HTML &middot; CSS &middot; JavaScript
+    <b>
+     ●
+    </b>
+    Responsive UI
+   </span>
+  </footer>
+ </body>
+</html>
+
