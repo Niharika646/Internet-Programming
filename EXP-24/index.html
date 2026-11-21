@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Plan stays, routes and memorable destination experiences." name="description"/>
+  <title>
+   Wanderlust Travel Planner | Internet Programming Lab
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body class="theme-travel" data-experiment="24">
+  <div class="announcement">
+   INTERNET PROGRAMMING LAB
+   <span>
+    EXPERIMENT 24
+   </span>
+   <span class="demo-flag">
+    FRONT-END DEMO
+   </span>
+  </div>
+  <header class="site-header">
+   <a class="brand" href="#top">
+    <span class="brand-mark">
+     ✦
+    </span>
+    <span>
+     <strong>
+      Wanderlust Travel Planner
+     </strong>
+     <small>
+      Wanderlust
+     </small>
+    </span>
+   </a>
+   <nav class="main-nav">
+    <a href="#catalog">
+     Travel ideas
+    </a>
+    <a href="#workspace">
+     Trip summary
+    </a>
+    <a href="#about">
+     About this demo
+    </a>
+   </nav>
+   <button class="nav-action" onclick="document.getElementById('workspace').scrollIntoView({behavior:'smooth'})">
+    Get started
+    <span>
+     &nearrow;
+    </span>
+   </button>
+  </header>
+  <main class="page-shell" id="top">
+   <section class="hero hero-travel">
+    <div>
+     <p class="eyebrow">
+      TRAVEL / ITINERARY PLANNER
+     </p>
+     <h1>
+      Wanderlust Travel Planner
+     </h1>
+     <p>
+      Plan stays, routes and memorable destination experiences.
+     </p>
+     <div class="travel-stat">
+      <span>
+       ✦ Easy planning
+      </span>
+      <span>
+       ◉ Clear details
+      </span>
+      <span>
+       &nearrow; Demo booking
+      </span>
+     </div>
+    </div>
+    <div class="route-visual">
+     <div class="route-line">
+     </div>
+     <span class="station station-a">
+      A
+     </span>
+     <span class="station station-b">
+      B
+     </span>
+     <div class="route-chip">
+      YOUR NEXT JOURNEY
+     </div>
+     <div class="route-emoji">
+      🚌
+     </div>
+    </div>
+   </section>
+   <div class="quick-strip">
+    <div class="quick-item">
+     <span class="quick-icon">
+      ✦
+     </span>
+     <span>
+      <strong>
+       Destinations
+      </strong>
+      <small>
+       Explore the available service.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      ◉
+     </span>
+     <span>
+      <strong>
+       Stay options
+      </strong>
+      <small>
+       Review the details and options.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      &nearrow;
+     </span>
+     <span>
+      <strong>
+       Local routes &amp; food
+      </strong>
+      <small>
+       Continue with the next step.
+      </small>
+     </span>
+    </div>
+   </div>
+   <section class="section-block" id="catalog">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       DISCOVER
+      </p>
+      <h2>
+       Travel ideas
+      </h2>
+     </div>
+     <span class="section-count">
+      03 AREAS
+     </span>
+    </div>
+    <div class="feature-grid">
+     <article class="feature-card feature-1">
+      <div class="feature-symbol">
+       ✦
+      </div>
+      <h3>
+       Destinations
+      </h3>
+      <p>
+       Explore the available service.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+     <article class="feature-card feature-2">
+      <div class="feature-symbol">
+       ◈
+      </div>
+      <h3>
+       Stay options
+      </h3>
+      <p>
+       Review the details and options.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+     <article class="feature-card feature-3">
+      <div class="feature-symbol">
+       &nearrow;
+      </div>
+      <h3>
+       Local routes &amp; food
+      </h3>
+      <p>
+       Continue with the next step.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+    </div>
+   </section>
+   <section class="section-block workspace-section booking-workspace" id="workspace">
+    <div class="workspace-heading">
+     <div>
+      <p class="eyebrow">
+       YOUR WORKSPACE
+      </p>
+      <h2>
+       Trip summary
+      </h2>
+      <p>
+       Share your travel preferences to build a sample plan.
+      </p>
+     </div>
+     <div class="workspace-stamp">
+      <span>
+       24
+      </span>
+      <small>
+       EXPERIMENT
+      </small>
+     </div>
+    </div>
+    <form class="workspace-form field-grid" id="mainForm">
+     <label class="field">
+      <span>
+       Destination
+      </span>
+      <input id="field0" name="field0" placeholder="Enter destination" required="" type="text"/>
+     </label>
+     <label class="field">
+      <span>
+       Travel date
+      </span>
+      <input id="field1" name="field1" placeholder="Enter travel date" required="" type="date"/>
+     </label>
+     <label class="field">
+      <span>
+       Return date
+      </span>
+      <input id="field2" name="field2" placeholder="Enter return date" type="date"/>
+     </label>
+     <label class="field">
+      <span>
+       Travellers
+      </span>
+      <input id="field3" min="0" name="field3" placeholder="Enter travellers" type="number"/>
+     </label>
+     <label class="field">
+      <span>
+       Accommodation
+      </span>
+      <select id="field4" name="field4">
+       <option value="">
+        Choose accommodation
+       </option>
+       <option>
+        Hotel
+       </option>
+       <option>
+        Hostel
+       </option>
+       <option>
+        Resort
+       </option>
+       <option>
+        Homestay
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Food preference
+      </span>
+      <select id="field5" name="field5">
+       <option value="">
+        Choose food preference
+       </option>
+       <option>
+        Any
+       </option>
+       <option>
+        Vegetarian
+       </option>
+       <option>
+        Vegan
+       </option>
+       <option>
+        Local cuisine
+       </option>
+      </select>
+     </label>
+     <label class="field wide">
+      <span>
+       Route / activity interests
+      </span>
+      <textarea id="field6" name="field6" placeholder="Enter route / activity interests" rows="3"></textarea>
+     </label>
+     <div class="form-actions">
+      <button class="submit-btn" type="submit">
+       Build my trip
+       <span>
+        &rarr;
+       </span>
+      </button>
+      <button class="reset-btn" type="reset">
+       Clear form
+      </button>
+     </div>
+    </form>
+    <div aria-live="polite" class="result-panel" hidden="" id="result">
+    </div>
+   </section>
+   <section class="note-band">
+    <div class="note-icon">
+     ✳
+    </div>
+    <div>
+     <p class="eyebrow">
+      GOOD TO KNOW
+     </p>
+     <h2>
+      Built around the task
+     </h2>
+     <p>
+      This page uses controls and a result format tailored to this experiment.
+     </p>
+    </div>
+    <a href="#workspace">
+     Continue to workspace &nearrow;
+    </a>
+   </section>
+   <section class="about-demo" id="about">
+    <div>
+     <p class="eyebrow">
+      ABOUT THIS EXPERIMENT
+     </p>
+     <h2>
+      A task-focused interface, built for the lab.
+     </h2>
+    </div>
+    <p>
+     This website demonstrates the fields, workflow and result associated with
+     <strong>
+      Experiment 24: Wanderlust Travel Planner
+     </strong>
+     . Generated records are stored only in this page session and are not sent to a server.
+    </p>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <span>
+    &copy; 2026 Wanderlust Travel Planner &mdash; Lab demonstration
+   </span>
+   <span>
+    HTML &middot; CSS &middot; JavaScript
+    <b>
+     ●
+    </b>
+    Responsive UI
+   </span>
+  </footer>
+ </body>
+</html>
+
