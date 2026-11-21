@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Connect farmers with veterinary care and advice." name="description"/>
+  <title>
+   VetCure Animal Health | Internet Programming Lab
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body class="theme-health" data-experiment="19">
+  <div class="announcement">
+   INTERNET PROGRAMMING LAB
+   <span>
+    EXPERIMENT 19
+   </span>
+   <span class="demo-flag">
+    FRONT-END DEMO
+   </span>
+  </div>
+  <header class="site-header">
+   <a class="brand" href="#top">
+    <span class="brand-mark">
+     ✚
+    </span>
+    <span>
+     <strong>
+      VetCure Animal Health
+     </strong>
+     <small>
+      Care portal
+     </small>
+    </span>
+   </a>
+   <nav class="main-nav">
+    <a href="#catalog">
+     Care services
+    </a>
+    <a href="#workspace">
+     Request summary
+    </a>
+    <a href="#about">
+     About this demo
+    </a>
+   </nav>
+   <button class="nav-action" onclick="document.getElementById('workspace').scrollIntoView({behavior:'smooth'})">
+    Get started
+    <span>
+     &nearrow;
+    </span>
+   </button>
+  </header>
+  <main class="page-shell" id="top">
+   <section class="hero hero-care">
+    <div class="care-icon">
+     ✚
+    </div>
+    <div>
+     <p class="eyebrow">
+      HEALTH / CARE PORTAL
+     </p>
+     <h1>
+      VetCure Animal Health
+     </h1>
+     <p>
+      Connect farmers with veterinary care and advice.
+     </p>
+     <div class="trust-row">
+      <span>
+       &checkmark; Easy scheduling
+      </span>
+      <span>
+       &checkmark; Clear next steps
+      </span>
+     </div>
+    </div>
+    <div class="care-side">
+     <span class="care-dot">
+     </span>
+     <span class="care-dot">
+     </span>
+     <span class="care-dot">
+     </span>
+     <strong>
+      Care, made simpler.
+     </strong>
+    </div>
+   </section>
+   <div class="quick-strip">
+    <div class="quick-item">
+     <span class="quick-icon">
+      ✦
+     </span>
+     <span>
+      <strong>
+       Submit case
+      </strong>
+      <small>
+       Search by specialty and location.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      ◉
+     </span>
+     <span>
+      <strong>
+       Veterinarian directory
+      </strong>
+      <small>
+       Request a suitable appointment.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      &nearrow;
+     </span>
+     <span>
+      <strong>
+       Animal health reports
+      </strong>
+      <small>
+       Review your visit details.
+      </small>
+     </span>
+    </div>
+   </div>
+   <section class="section-block" id="catalog">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       DISCOVER
+      </p>
+      <h2>
+       Care services
+      </h2>
+     </div>
+     <span class="section-count">
+      03 AREAS
+     </span>
+    </div>
+    <div class="feature-grid">
+     <article class="feature-card feature-1">
+      <div class="feature-symbol">
+       ✦
+      </div>
+      <h3>
+       Submit case
+      </h3>
+      <p>
+       Search by specialty and location.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+     <article class="feature-card feature-2">
+      <div class="feature-symbol">
+       ◈
+      </div>
+      <h3>
+       Veterinarian directory
+      </h3>
+      <p>
+       Request a suitable appointment.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+     <article class="feature-card feature-3">
+      <div class="feature-symbol">
+       &nearrow;
+      </div>
+      <h3>
+       Animal health reports
+      </h3>
+      <p>
+       Review your visit details.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+    </div>
+   </section>
+   <section class="section-block workspace-section booking-workspace" id="workspace">
+    <div class="workspace-heading">
+     <div>
+      <p class="eyebrow">
+       YOUR WORKSPACE
+      </p>
+      <h2>
+       Request summary
+      </h2>
+      <p>
+       Share the details needed to request a suitable slot.
+      </p>
+     </div>
+     <div class="workspace-stamp">
+      <span>
+       19
+      </span>
+      <small>
+       EXPERIMENT
+      </small>
+     </div>
+    </div>
+    <form class="workspace-form field-grid" id="mainForm">
+     <label class="field">
+      <span>
+       Farmer name
+      </span>
+      <input id="field0" name="field0" placeholder="Enter farmer name" required="" type="text"/>
+     </label>
+     <label class="field">
+      <span>
+       Village / location
+      </span>
+      <input id="field1" name="field1" placeholder="Enter village / location" required="" type="text"/>
+     </label>
+     <label class="field">
+      <span>
+       Animal type
+      </span>
+      <select id="field2" name="field2">
+       <option value="">
+        Choose animal type
+       </option>
+       <option>
+        Cow
+       </option>
+       <option>
+        Buffalo
+       </option>
+       <option>
+        Goat
+       </option>
+       <option>
+        Sheep
+       </option>
+       <option>
+        Poultry
+       </option>
+       <option>
+        Pet
+       </option>
+      </select>
+     </label>
+     <label class="field wide">
+      <span>
+       Symptoms
+      </span>
+      <textarea id="field3" name="field3" placeholder="Enter symptoms" rows="3"></textarea>
+     </label>
+     <label class="field">
+      <span>
+       Duration of symptoms
+      </span>
+      <select id="field4" name="field4">
+       <option value="">
+        Choose duration of symptoms
+       </option>
+       <option>
+        Today
+       </option>
+       <option>
+        1&ndash;3 days
+       </option>
+       <option>
+        4&ndash;7 days
+       </option>
+       <option>
+        Over a week
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Preferred consultation
+      </span>
+      <select id="field5" name="field5">
+       <option value="">
+        Choose preferred consultation
+       </option>
+       <option>
+        Video
+       </option>
+       <option>
+        Audio
+       </option>
+       <option>
+        Text
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Doctor / clinic
+      </span>
+      <input id="field6" name="field6" placeholder="Enter doctor / clinic" type="text"/>
+     </label>
+     <div class="form-actions">
+      <button class="submit-btn" type="submit">
+       Send veterinary request
+       <span>
+        &rarr;
+       </span>
+      </button>
+      <button class="reset-btn" type="reset">
+       Clear form
+      </button>
+     </div>
+    </form>
+    <div aria-live="polite" class="result-panel" hidden="" id="result">
+    </div>
+   </section>
+   <section class="note-band">
+    <div class="note-icon">
+     ✳
+    </div>
+    <div>
+     <p class="eyebrow">
+      GOOD TO KNOW
+     </p>
+     <h2>
+      Before your visit
+     </h2>
+     <p>
+      Appointment information is a local demo. Do not enter real medical or sensitive personal information.
+     </p>
+    </div>
+    <a href="#workspace">
+     Continue to workspace &nearrow;
+    </a>
+   </section>
+   <section class="about-demo" id="about">
+    <div>
+     <p class="eyebrow">
+      ABOUT THIS EXPERIMENT
+     </p>
+     <h2>
+      A task-focused interface, built for the lab.
+     </h2>
+    </div>
+    <p>
+     This website demonstrates the fields, workflow and result associated with
+     <strong>
+      Experiment 19: VetCure Animal Health
+     </strong>
+     . Generated records are stored only in this page session and are not sent to a server.
+    </p>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <span>
+    &copy; 2026 VetCure Animal Health &mdash; Lab demonstration
+   </span>
+   <span>
+    HTML &middot; CSS &middot; JavaScript
+    <b>
+     ●
+    </b>
+    Responsive UI
+   </span>
+  </footer>
+ </body>
+</html>
+
