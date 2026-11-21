@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Everyday fashion, fresh drops and affordable finds." name="description"/>
+  <title>
+   StyleHub Fashion | Internet Programming Lab
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body class="theme-fashion" data-experiment="10">
+  <div class="announcement">
+   INTERNET PROGRAMMING LAB
+   <span>
+    EXPERIMENT 10
+   </span>
+   <span class="demo-flag">
+    FRONT-END DEMO
+   </span>
+  </div>
+  <header class="site-header">
+   <a class="brand" href="#top">
+    <span class="brand-mark">
+     S
+    </span>
+    <span>
+     <strong>
+      StyleHub Fashion
+     </strong>
+     <small>
+      StyleHub
+     </small>
+    </span>
+   </a>
+   <nav class="main-nav">
+    <a href="#catalog">
+     Trending categories
+    </a>
+    <a href="#workspace">
+     Your style bag
+    </a>
+    <a href="#about">
+     About this demo
+    </a>
+   </nav>
+   <button class="nav-action" onclick="document.getElementById('workspace').scrollIntoView({behavior:'smooth'})">
+    Get started
+    <span>
+     &nearrow;
+    </span>
+   </button>
+  </header>
+  <main class="page-shell" id="top">
+   <section class="hero hero-store">
+    <div class="hero-copy">
+     <p class="eyebrow">
+      STYLE / FASHION
+     </p>
+     <h1>
+      StyleHub Fashion
+      <br/>
+      <em>
+       Everyday fashion, fresh drops and affordable finds.
+      </em>
+     </h1>
+     <p class="hero-sub">
+      Explore collections selected for your everyday needs.
+     </p>
+     <a class="primary-link" href="#catalog">
+      Explore collection
+      <b>
+       &nearrow;
+      </b>
+     </a>
+    </div>
+    <div class="hero-art">
+     <div class="art-orbit orbit-one">
+     </div>
+     <div class="art-orbit orbit-two">
+     </div>
+     <div class="art-object">
+      🧥
+     </div>
+     <div class="floating-note">
+      Curated for you
+      <strong>
+       ✦
+      </strong>
+     </div>
+    </div>
+   </section>
+   <div class="quick-strip">
+    <div class="quick-item">
+     <span class="quick-icon">
+      ✦
+     </span>
+     <span>
+      <strong>
+       Kurtas &amp; sets
+      </strong>
+      <small>
+       Browse by department and style.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      ◉
+     </span>
+     <span>
+      <strong>
+       Dresses
+      </strong>
+      <small>
+       Choose size and colour preferences.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      &nearrow;
+     </span>
+     <span>
+      <strong>
+       Footwear
+      </strong>
+      <small>
+       Save items in your style bag.
+      </small>
+     </span>
+    </div>
+   </div>
+   <section class="section-block product-section" id="catalog">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       THE COLLECTION
+      </p>
+      <h2>
+       Popular right now
+      </h2>
+     </div>
+     <div class="product-controls">
+      <select id="categoryFilter">
+       <option value="All">
+        All categories
+       </option>
+       <option>
+        Accessories
+       </option>
+       <option>
+        Footwear
+       </option>
+       <option>
+        Kids
+       </option>
+       <option>
+        Men
+       </option>
+       <option>
+        Women
+       </option>
+      </select>
+      <span class="cart-pill">
+       🛍 Cart
+       <b id="cartCount">
+        0
+       </b>
+      </span>
+     </div>
+    </div>
+    <div class="product-grid">
+     <article class="product-card" data-category="Women">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-1">
+       <span>
+        👗
+       </span>
+       <small>
+        BESTSELLER
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Women
+       </small>
+       <h3>
+        Printed kurta set
+       </h3>
+       <div class="rating">
+        &starf; 4.8
+        <span>
+         (31)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹699
+        </strong>
+        <span class="old-price">
+         ₹999
+        </span>
+       </div>
+       <button class="add-cart" data-price="699" data-product="Printed kurta set" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+     <article class="product-card" data-category="Men">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-2">
+       <span>
+        👔
+       </span>
+       <small>
+        NEW FIND
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Men
+       </small>
+       <h3>
+        Casual shirt
+       </h3>
+       <div class="rating">
+        &starf; 4.7
+        <span>
+         (38)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹499
+        </strong>
+        <span class="old-price">
+         ₹799
+        </span>
+       </div>
+       <button class="add-cart" data-price="499" data-product="Casual shirt" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+     <article class="product-card" data-category="Footwear">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-3">
+       <span>
+        👟
+       </span>
+       <small>
+        PICKED FOR YOU
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Footwear
+       </small>
+       <h3>
+        Everyday sneakers
+       </h3>
+       <div class="rating">
+        &starf; 4.6
+        <span>
+         (45)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹899
+        </strong>
+        <span class="old-price">
+         ₹1,199
+        </span>
+       </div>
+       <button class="add-cart" data-price="899" data-product="Everyday sneakers" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+     <article class="product-card" data-category="Accessories">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-4">
+       <span>
+        👜
+       </span>
+       <small>
+        NEW FIND
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Accessories
+       </small>
+       <h3>
+        Mini sling bag
+       </h3>
+       <div class="rating">
+        &starf; 4.5
+        <span>
+         (52)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹399
+        </strong>
+        <span class="old-price">
+         ₹699
+        </span>
+       </div>
+       <button class="add-cart" data-price="399" data-product="Mini sling bag" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+     <article class="product-card" data-category="Kids">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-5">
+       <span>
+        🧒
+       </span>
+       <small>
+        GREAT VALUE
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Kids
+       </small>
+       <h3>
+        Kids festive wear
+       </h3>
+       <div class="rating">
+        &starf; 4.8
+        <span>
+         (59)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹799
+        </strong>
+        <span class="old-price">
+         ₹1,099
+        </span>
+       </div>
+       <button class="add-cart" data-price="799" data-product="Kids festive wear" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+     <article class="product-card" data-category="Women">
+      <button aria-label="Save item" class="heart" type="button">
+       ♡
+      </button>
+      <div class="product-art product-art-6">
+       <span>
+        👚
+       </span>
+       <small>
+        NEW FIND
+       </small>
+      </div>
+      <div class="product-info">
+       <small>
+        Women
+       </small>
+       <h3>
+        Cotton co-ord
+       </h3>
+       <div class="rating">
+        &starf; 4.7
+        <span>
+         (66)
+        </span>
+       </div>
+       <div class="price-row">
+        <strong>
+         ₹649
+        </strong>
+        <span class="old-price">
+         ₹949
+        </span>
+       </div>
+       <button class="add-cart" data-price="649" data-product="Cotton co-ord" type="button">
+        Add to cart +
+       </button>
+      </div>
+     </article>
+    </div>
+    <div aria-live="polite" class="cart-feedback" id="cartFeedback">
+     Your cart is empty. Add a product to see your cart total.
+    </div>
+   </section>
+   <section class="section-block workspace-section" id="workspace">
+    <div class="workspace-heading">
+     <div>
+      <p class="eyebrow">
+       PERSONALISE YOUR EXPERIENCE
+      </p>
+      <h2>
+       Search &amp; checkout
+      </h2>
+      <p>
+       Use the controls to filter the collection or generate a sample order.
+      </p>
+     </div>
+     <div class="workspace-badge">
+      DEMO CHECKOUT
+      <span>
+       ●
+      </span>
+     </div>
+    </div>
+    <form class="workspace-form store-form" id="mainForm">
+     <label class="field">
+      <span>
+       Search fashion
+      </span>
+      <input id="field0" name="field0" placeholder="Enter search fashion" required="" type="search"/>
+     </label>
+     <label class="field">
+      <span>
+       Department
+      </span>
+      <select id="field1" name="field1" required="">
+       <option value="">
+        Choose department
+       </option>
+       <option>
+        Women
+       </option>
+       <option>
+        Men
+       </option>
+       <option>
+        Kids
+       </option>
+       <option>
+        Home
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Category
+      </span>
+      <select id="field2" name="field2">
+       <option value="">
+        Choose category
+       </option>
+       <option>
+        Ethnic wear
+       </option>
+       <option>
+        Western wear
+       </option>
+       <option>
+        Footwear
+       </option>
+       <option>
+        Bags
+       </option>
+       <option>
+        Accessories
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Size
+      </span>
+      <select id="field3" name="field3">
+       <option value="">
+        Choose size
+       </option>
+       <option>
+        Any
+       </option>
+       <option>
+        XS
+       </option>
+       <option>
+        S
+       </option>
+       <option>
+        M
+       </option>
+       <option>
+        L
+       </option>
+       <option>
+        XL
+       </option>
+       <option>
+        XXL
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Sort by
+      </span>
+      <select id="field4" name="field4">
+       <option value="">
+        Choose sort by
+       </option>
+       <option>
+        Popular
+       </option>
+       <option>
+        Price low to high
+       </option>
+       <option>
+        Newest
+       </option>
+       <option>
+        Top rated
+       </option>
+      </select>
+     </label>
+     <button class="submit-btn" type="submit">
+      Explore collection
+      <span>
+       &rarr;
+      </span>
+     </button>
+    </form>
+    <div aria-live="polite" class="result-panel" hidden="" id="result">
+    </div>
+   </section>
+   <section class="note-band">
+    <div class="note-icon">
+     ✳
+    </div>
+    <div>
+     <p class="eyebrow">
+      GOOD TO KNOW
+     </p>
+     <h2>
+      Find your fit
+     </h2>
+     <p>
+      A practical navigation system puts departments, categories and size filters first.
+     </p>
+    </div>
+    <a href="#workspace">
+     Continue to workspace &nearrow;
+    </a>
+   </section>
+   <section class="about-demo" id="about">
+    <div>
+     <p class="eyebrow">
+      ABOUT THIS EXPERIMENT
+     </p>
+     <h2>
+      A task-focused interface, built for the lab.
+     </h2>
+    </div>
+    <p>
+     This website demonstrates the fields, workflow and result associated with
+     <strong>
+      Experiment 10: StyleHub Fashion
+     </strong>
+     . Generated records are stored only in this page session and are not sent to a server.
+    </p>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <span>
+    &copy; 2026 StyleHub Fashion &mdash; Lab demonstration
+   </span>
+   <span>
+    HTML &middot; CSS &middot; JavaScript
+    <b>
+     ●
+    </b>
+    Responsive UI
+   </span>
+  </footer>
+ </body>
+</html>
+
