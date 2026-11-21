@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Compare coverage, manage renewals and start a claim." name="description"/>
+  <title>
+   InsureEasy Policy Desk | Internet Programming Lab
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body class="theme-dashboard" data-experiment="12">
+  <div class="announcement">
+   INTERNET PROGRAMMING LAB
+   <span>
+    EXPERIMENT 12
+   </span>
+   <span class="demo-flag">
+    FRONT-END DEMO
+   </span>
+  </div>
+  <header class="site-header">
+   <a class="brand" href="#top">
+    <span class="brand-mark">
+     ◫
+    </span>
+    <span>
+     <strong>
+      InsureEasy Policy Desk
+     </strong>
+     <small>
+      Control centre
+     </small>
+    </span>
+   </a>
+   <nav class="main-nav">
+    <a href="#catalog">
+     Account modules
+    </a>
+    <a href="#workspace">
+     Activity summary
+    </a>
+    <a href="#about">
+     About this demo
+    </a>
+   </nav>
+   <button class="nav-action" onclick="document.getElementById('workspace').scrollIntoView({behavior:'smooth'})">
+    Get started
+    <span>
+     &nearrow;
+    </span>
+   </button>
+  </header>
+  <main class="page-shell" id="top">
+   <section class="hero hero-board">
+    <div>
+     <p class="eyebrow">
+      ACCOUNT / MANAGEMENT
+     </p>
+     <h1>
+      InsureEasy Policy Desk
+     </h1>
+     <p>
+      Compare coverage, manage renewals and start a claim.
+     </p>
+    </div>
+    <div class="board-preview">
+     <div class="board-top">
+      <i>
+      </i>
+      <i>
+      </i>
+      <i>
+      </i>
+      <span>
+       OVERVIEW
+      </span>
+     </div>
+     <div class="board-metric">
+      <small>
+       REQUESTS TODAY
+      </small>
+      <strong>
+       102
+      </strong>
+      <span class="positive">
+       &uarr; updated locally
+      </span>
+     </div>
+     <div class="board-mini">
+      <b>
+      </b>
+      <b>
+      </b>
+      <b>
+      </b>
+      <b>
+      </b>
+      <b>
+      </b>
+      <b>
+      </b>
+      <b>
+      </b>
+     </div>
+    </div>
+   </section>
+   <div class="quick-strip">
+    <div class="quick-item">
+     <span class="quick-icon">
+      ✦
+     </span>
+     <span>
+      <strong>
+       My policies
+      </strong>
+      <small>
+       View your account summary.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      ◉
+     </span>
+     <span>
+      <strong>
+       Renewal reminders
+      </strong>
+      <small>
+       Manage records and requests.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      &nearrow;
+     </span>
+     <span>
+      <strong>
+       Claims centre
+      </strong>
+      <small>
+       Review recent activity.
+      </small>
+     </span>
+    </div>
+   </div>
+   <section class="section-block" id="catalog">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       DISCOVER
+      </p>
+      <h2>
+       Account modules
+      </h2>
+     </div>
+     <span class="section-count">
+      03 AREAS
+     </span>
+    </div>
+    <div class="feature-grid">
+     <article class="feature-card feature-1">
+      <div class="feature-symbol">
+       ✦
+      </div>
+      <h3>
+       My policies
+      </h3>
+      <p>
+       View your account summary.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+     <article class="feature-card feature-2">
+      <div class="feature-symbol">
+       ◈
+      </div>
+      <h3>
+       Renewal reminders
+      </h3>
+      <p>
+       Manage records and requests.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+     <article class="feature-card feature-3">
+      <div class="feature-symbol">
+       &nearrow;
+      </div>
+      <h3>
+       Claims centre
+      </h3>
+      <p>
+       Review recent activity.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+    </div>
+   </section>
+   <section class="section-block workspace-section dashboard-workspace" id="workspace">
+    <div class="workspace-heading">
+     <div>
+      <p class="eyebrow">
+       YOUR WORKSPACE
+      </p>
+      <h2>
+       Activity summary
+      </h2>
+      <p>
+       Choose an action and enter the relevant account information.
+      </p>
+     </div>
+     <div class="workspace-stamp">
+      <span>
+       12
+      </span>
+      <small>
+       EXPERIMENT
+      </small>
+     </div>
+    </div>
+    <form class="workspace-form field-grid" id="mainForm">
+     <label class="field">
+      <span>
+       Customer name
+      </span>
+      <input id="field0" name="field0" placeholder="Enter customer name" required="" type="text"/>
+     </label>
+     <label class="field">
+      <span>
+       Policy type
+      </span>
+      <select id="field1" name="field1" required="">
+       <option value="">
+        Choose policy type
+       </option>
+       <option>
+        Health
+       </option>
+       <option>
+        Motor
+       </option>
+       <option>
+        Home
+       </option>
+       <option>
+        Life
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Policy number
+      </span>
+      <input id="field2" name="field2" placeholder="Enter policy number" type="text"/>
+     </label>
+     <label class="field">
+      <span>
+       Action
+      </span>
+      <select id="field3" name="field3">
+       <option value="">
+        Choose action
+       </option>
+       <option>
+        Compare policies
+       </option>
+       <option>
+        View policy
+       </option>
+       <option>
+        Pay premium
+       </option>
+       <option>
+        File a claim
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Premium amount (₹)
+      </span>
+      <input id="field4" min="0" name="field4" placeholder="Enter premium amount (₹)" type="number"/>
+     </label>
+     <label class="field">
+      <span>
+       Renewal date
+      </span>
+      <input id="field5" name="field5" placeholder="Enter renewal date" type="date"/>
+     </label>
+     <div class="form-actions">
+      <button class="submit-btn" type="submit">
+       Continue
+       <span>
+        &rarr;
+       </span>
+      </button>
+      <button class="reset-btn" type="reset">
+       Clear form
+      </button>
+     </div>
+    </form>
+    <div aria-live="polite" class="result-panel" hidden="" id="result">
+    </div>
+   </section>
+   <section class="note-band">
+    <div class="note-icon">
+     ✳
+    </div>
+    <div>
+     <p class="eyebrow">
+      GOOD TO KNOW
+     </p>
+     <h2>
+      Built around the task
+     </h2>
+     <p>
+      This page uses controls and a result format tailored to this experiment.
+     </p>
+    </div>
+    <a href="#workspace">
+     Continue to workspace &nearrow;
+    </a>
+   </section>
+   <section class="about-demo" id="about">
+    <div>
+     <p class="eyebrow">
+      ABOUT THIS EXPERIMENT
+     </p>
+     <h2>
+      A task-focused interface, built for the lab.
+     </h2>
+    </div>
+    <p>
+     This website demonstrates the fields, workflow and result associated with
+     <strong>
+      Experiment 12: InsureEasy Policy Desk
+     </strong>
+     . Generated records are stored only in this page session and are not sent to a server.
+    </p>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <span>
+    &copy; 2026 InsureEasy Policy Desk &mdash; Lab demonstration
+   </span>
+   <span>
+    HTML &middot; CSS &middot; JavaScript
+    <b>
+     ●
+    </b>
+    Responsive UI
+   </span>
+  </footer>
+ </body>
+</html>
+
