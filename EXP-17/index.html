@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Review candidates and cast a demo ballot." name="description"/>
+  <title>
+   VoteOnline Election Portal | Internet Programming Lab
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body class="theme-civic" data-experiment="17">
+  <div class="announcement">
+   INTERNET PROGRAMMING LAB
+   <span>
+    EXPERIMENT 17
+   </span>
+   <span class="demo-flag">
+    FRONT-END DEMO
+   </span>
+  </div>
+  <header class="site-header">
+   <a class="brand" href="#top">
+    <span class="brand-mark">
+     ◎
+    </span>
+    <span>
+     <strong>
+      VoteOnline Election Portal
+     </strong>
+     <small>
+      Citizen services
+     </small>
+    </span>
+   </a>
+   <nav class="main-nav">
+    <a href="#catalog">
+     Service modules
+    </a>
+    <a href="#workspace">
+     Request record
+    </a>
+    <a href="#about">
+     About this demo
+    </a>
+   </nav>
+   <button class="nav-action" onclick="document.getElementById('workspace').scrollIntoView({behavior:'smooth'})">
+    Get started
+    <span>
+     &nearrow;
+    </span>
+   </button>
+  </header>
+  <main class="page-shell" id="top">
+   <section class="hero hero-board">
+    <div>
+     <p class="eyebrow">
+      PUBLIC SERVICE / CITIZEN PORTAL
+     </p>
+     <h1>
+      VoteOnline Election Portal
+     </h1>
+     <p>
+      Review candidates and cast a demo ballot.
+     </p>
+    </div>
+    <div class="board-preview">
+     <div class="board-top">
+      <i>
+      </i>
+      <i>
+      </i>
+      <i>
+      </i>
+      <span>
+       OVERVIEW
+      </span>
+     </div>
+     <div class="board-metric">
+      <small>
+       REQUESTS TODAY
+      </small>
+      <strong>
+       137
+      </strong>
+      <span class="positive">
+       &uarr; updated locally
+      </span>
+     </div>
+     <div class="board-mini">
+      <b>
+      </b>
+      <b>
+      </b>
+      <b>
+      </b>
+      <b>
+      </b>
+      <b>
+      </b>
+      <b>
+      </b>
+      <b>
+      </b>
+     </div>
+    </div>
+   </section>
+   <div class="quick-strip">
+    <div class="quick-item">
+     <span class="quick-icon">
+      ✦
+     </span>
+     <span>
+      <strong>
+       Voter verification
+      </strong>
+      <small>
+       Open a service request.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      ◉
+     </span>
+     <span>
+      <strong>
+       Candidate profiles
+      </strong>
+      <small>
+       Track a case or reference number.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      &nearrow;
+     </span>
+     <span>
+      <strong>
+       Results dashboard
+      </strong>
+      <small>
+       Review status and action history.
+      </small>
+     </span>
+    </div>
+   </div>
+   <section class="section-block" id="catalog">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       DISCOVER
+      </p>
+      <h2>
+       Service modules
+      </h2>
+     </div>
+     <span class="section-count">
+      03 AREAS
+     </span>
+    </div>
+    <div class="feature-grid">
+     <article class="feature-card feature-1">
+      <div class="feature-symbol">
+       ✦
+      </div>
+      <h3>
+       Voter verification
+      </h3>
+      <p>
+       Open a service request.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+     <article class="feature-card feature-2">
+      <div class="feature-symbol">
+       ◈
+      </div>
+      <h3>
+       Candidate profiles
+      </h3>
+      <p>
+       Track a case or reference number.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+     <article class="feature-card feature-3">
+      <div class="feature-symbol">
+       &nearrow;
+      </div>
+      <h3>
+       Results dashboard
+      </h3>
+      <p>
+       Review status and action history.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+    </div>
+   </section>
+   <section class="section-block workspace-section dashboard-workspace" id="workspace">
+    <div class="workspace-heading">
+     <div>
+      <p class="eyebrow">
+       YOUR WORKSPACE
+      </p>
+      <h2>
+       Request record
+      </h2>
+      <p>
+       Submit a request or enter a reference to track a case.
+      </p>
+     </div>
+     <div class="workspace-stamp">
+      <span>
+       17
+      </span>
+      <small>
+       EXPERIMENT
+      </small>
+     </div>
+    </div>
+    <form class="workspace-form field-grid" id="mainForm">
+     <label class="field">
+      <span>
+       Voter ID
+      </span>
+      <input id="field0" name="field0" placeholder="Enter voter id" required="" type="text"/>
+     </label>
+     <label class="field">
+      <span>
+       Election / ward
+      </span>
+      <select id="field1" name="field1" required="">
+       <option value="">
+        Choose election / ward
+       </option>
+       <option>
+        Student council
+       </option>
+       <option>
+        Community ward
+       </option>
+       <option>
+        Club committee
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Verification code
+      </span>
+      <input id="field2" name="field2" placeholder="Enter verification code" type="text"/>
+     </label>
+     <label class="field">
+      <span>
+       Candidate
+      </span>
+      <select id="field3" name="field3">
+       <option value="">
+        Choose candidate
+       </option>
+       <option>
+        Candidate A
+       </option>
+       <option>
+        Candidate B
+       </option>
+       <option>
+        Candidate C
+       </option>
+       <option>
+        NOTA
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Confirm choice
+      </span>
+      <select id="field4" name="field4">
+       <option value="">
+        Choose confirm choice
+       </option>
+       <option>
+        Yes
+       </option>
+       <option>
+        No
+       </option>
+      </select>
+     </label>
+     <div class="form-actions">
+      <button class="submit-btn" type="submit">
+       Submit demo vote
+       <span>
+        &rarr;
+       </span>
+      </button>
+      <button class="reset-btn" type="reset">
+       Clear form
+      </button>
+     </div>
+    </form>
+    <div aria-live="polite" class="result-panel" hidden="" id="result">
+    </div>
+   </section>
+   <section class="note-band">
+    <div class="note-icon">
+     ✳
+    </div>
+    <div>
+     <p class="eyebrow">
+      GOOD TO KNOW
+     </p>
+     <h2>
+      Track every step
+     </h2>
+     <p>
+      The reference ID and status shown in this demonstration are generated locally.
+     </p>
+    </div>
+    <a href="#workspace">
+     Continue to workspace &nearrow;
+    </a>
+   </section>
+   <section class="about-demo" id="about">
+    <div>
+     <p class="eyebrow">
+      ABOUT THIS EXPERIMENT
+     </p>
+     <h2>
+      A task-focused interface, built for the lab.
+     </h2>
+    </div>
+    <p>
+     This website demonstrates the fields, workflow and result associated with
+     <strong>
+      Experiment 17: VoteOnline Election Portal
+     </strong>
+     . Generated records are stored only in this page session and are not sent to a server.
+    </p>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <span>
+    &copy; 2026 VoteOnline Election Portal &mdash; Lab demonstration
+   </span>
+   <span>
+    HTML &middot; CSS &middot; JavaScript
+    <b>
+     ●
+    </b>
+    Responsive UI
+   </span>
+  </footer>
+ </body>
+</html>
+
